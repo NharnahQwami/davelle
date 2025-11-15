@@ -289,7 +289,6 @@
         }
 
         .about-image {
-            background: linear-gradient(135deg, var(--primary-blue), var(--accent-red));
             border-radius: 12px;
             padding: 2rem;
             text-align: center;
@@ -300,6 +299,12 @@
             justify-content: center;
             font-size: 3rem;
         }
+
+        .about-image img {
+            object-fit: cover; 
+            border-radius: 12px; /* makes image round */
+        }
+
 
         /* Testimonials Section Styles */
         .testimonials {
@@ -840,7 +845,7 @@
                     </ul>
                 </div>
                 <div class="about-image">
-                    🌍
+                    <img src="box.jpeg" alt="brown box" height="350" width="350">
                 </div>
             </div>
         </div>
@@ -921,7 +926,7 @@
                     </p>
                     <p>
                         <strong>Email:</strong>
-                        <a href="mailto:info@davellelogistics.com">info@davellelogistics.com</a>
+                        <a href="mailto:customercare@davellelogistics.com">customercare@davellelogistics.com</a>
                     </p>
                     <p>
                         <strong>Business Hours:</strong>
@@ -1036,7 +1041,7 @@
 
             // Create mailto link (simple implementation)
             const emailBody = `Name: ${name}%0AEmail: ${email}%0APhone: ${phone}%0A%0AMessage:%0A${message}`;
-            window.location.href = `mailto:info@davellelogistics.com?subject=Vendor Inquiry from ${name}&body=${emailBody}`;
+            window.location.href = `mailto:customercare@davellelogistics.com?subject=Vendor Inquiry from ${name}&body=${emailBody}`;
             
             // Reset form
             contactForm.reset();
